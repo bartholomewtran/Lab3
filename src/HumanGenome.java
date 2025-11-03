@@ -1,3 +1,7 @@
+Bartholomew Tran
+F25 CIS D035A 11Y, 62Z Java Programming
+Assignment 2A
+
 public class HumanGenome {
     private String genomeName;
     private String genomeNumber;
