@@ -1,88 +1,72 @@
 public class NucleicAcid {
 
-    /*
+    // Create variable base, molarMass and density
+    private char base;
+    private double molarMass;
+    private double density;
 
-Create a class called NucleicAcid with following properties
-- Name - String
-- ChemicalFormula - String
-- Molarmass - float (and units can be added as a String (within printf())
-- Density - float (and units can be added as a String (within printf())
-
-     */
-
-    private String nucleicName;
-    private String chemicalFormula;
-    private float molarMass;
-    private float density;
-
-    /*
-
-    2. PROCESSING pt2
-
-    This is where the data is processed. The data will be cached into the instance variables through the
-    this.<variable> keyword. this.<variable> ensures that the specific instance variable is where the data
-    will be cached. After reassigning, the method will be called again in GenoNucleicAcid class.
-
-*/
-    public NucleicAcid(String nucleic_name, String chemical_formula, float molar_mass, float density) {
-        //watch out for order
-        this.nucleicName = nucleic_name;
-        this.chemicalFormula = chemical_formula;
-        this.molarMass = molar_mass;
-        this.density = density;
+    // Default constructor
+    public NucleicAcid() {
     }
 
+    // Overloaded constructor
+    public NucleicAcid(char base) {
+        this.base = base;
+        switch (base) {
 
-    //getter - setter
+            case 'C':
+                molarMass = 111.10;
+                density = 1.55;
+                break;
 
-    public String getNucleicName() {
-        return nucleicName;
+            case 'T':
+                molarMass = 126.115;
+                density = 1.223;
+                break;
+
+            case 'A':
+                molarMass = 135.13;
+                density = 1.6;
+                break;
+
+            case 'G':
+                molarMass = 151.13;
+                density = 2.200;
+        }
     }
 
-    public void setNucleicName(String nucleicName) {
-        this.nucleicName = nucleicName;
+    // Getter and Setter
+    public char getBase() {
+        return base;
     }
 
-    public String getChemicalFormula() {
-        return chemicalFormula;
+    public void setBase(char base) {
+        this.base = base;
     }
 
-    public void setChemicalFormula(String chemicalFormula) {
-        this.chemicalFormula = chemicalFormula;
-    }
-
-    public float getMolarMass() {
+    public double getMolarMass() {
         return molarMass;
     }
 
-    public void setMolarMass(float molarMass) {
+    public void setMolarMass(double molarMass) {
         this.molarMass = molarMass;
     }
 
-    public float getDensity() {
+    public double getDensity() {
         return density;
     }
 
-    public void setDensity(float density) {
+    public void setDensity(double density) {
         this.density = density;
     }
 
-    /*
+    // Print total Density of all nucleic acids
+    public void totalDensity() {
 
-        5. PRINT
+        // Create variable for compute total
+        double total = 0.0;
 
-        The data is printed in this method. This method is called in the GenoNucleicAcid class. For each person,
-        the printer will print the nucleicName, chemicalFormula, molarMass, and density values that have been inputted.
-
-         */
-    public void print () {
-        System.out.printf("---------------------------------------------\n" +
-                "This is the data of the nucleic ID you entered:\n\n");
-        System.out.println("Nucleic name: " + nucleicName);
-        System.out.println("Chemical formula: " + chemicalFormula);
-        System.out.println("Molar mass: " + molarMass);
-        System.out.println("Density: " + density);
-        System.out.printf("----------------------------------------------\n\n");
+        // Compute total value in LtoRHelix array
     }
 
 }

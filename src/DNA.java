@@ -56,12 +56,12 @@ public class DNA {
 
     }
 
-    // Finding the pair
+    // Finding the pair, practicing using switch
     protected char getComplement(char base) {
 
         // Finding the pair by using criteria below :
-        // 'A' always pair with 'T'
-        // 'G' always pair with 'C'
+        // 'A' -> 'T'
+        // 'G' -> 'C'
         // If not found any, then return '?'
         return switch (base) {
 
@@ -146,7 +146,7 @@ public class DNA {
                 // Get index value
                 index = i;
 
-                // Set isLeft value is FALSE because it from RtoLHelix
+                // FALSE because it from RtoLHelix
                 isLeft = false;
             }
 
