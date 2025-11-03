@@ -1,7 +1,7 @@
 /*
 Bartholomew Tran
 F25 CIS D035A 11Y, 62Z Java Programming
-Lab 3
+Assignment 3
 Due Date: November 2, 2025
 Date Submitted: November 2, 2025
  */
